@@ -13,6 +13,7 @@ public class DroneMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        speed = Random.Range(3, 6);
     }
 
     // Update is called once per frame
