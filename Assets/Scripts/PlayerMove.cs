@@ -12,6 +12,16 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void turnRight()
+    {
+        rb.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public void turnLeft()
+    {
+        rb.transform.localScale = new Vector3(-1, 1, 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +40,14 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(transform.right * -speed);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            turnLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            turnRight();
         }
     }
 }
