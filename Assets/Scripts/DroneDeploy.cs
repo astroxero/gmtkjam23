@@ -30,7 +30,7 @@ public class DroneDeploy : MonoBehaviour
     private void spawnDrone()
     {
         GameObject newDrone = Instantiate(dronePrefab) as GameObject;
-        newDrone.transform.position = new Vector2(screenBounds.x - 25, Random.Range(-4, 5));
+        newDrone.transform.position = new Vector2(screenBounds.x - 50, Random.Range(-4, 5));
 
         // Play drone sounds
         float volume = 1;
