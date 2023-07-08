@@ -6,7 +6,7 @@ public class DroneDead : MonoBehaviour
 {
 
     public float dronesPassed;
-    public StreeTriggered st;
+    public TreeTriggered st;
 
     // Start is called before the first frame update
     void Start()

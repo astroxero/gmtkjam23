@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 0
 --- !u!114 &55994334
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 5
 --- !u!114 &1016102444
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dronesPassed: 0
-  st: {fileID: 1523458776}
+  st: {fileID: 1523458780}
 --- !u!1 &1463679679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523458772}
   - component: {fileID: 1523458774}
-  - component: {fileID: 1523458776}
+  - component: {fileID: 1523458780}
   - component: {fileID: 1523458773}
   - component: {fileID: 1523458777}
   - component: {fileID: 1523458778}
@@ -1771,22 +1771,6 @@ MonoBehaviour:
   anim: {fileID: 0}
   rb: {fileID: 0}
   speed: 5.37
---- !u!114 &1523458776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523458771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967624f9f64dc40cca6598844f9f3aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeLeft: 0
-  totalLife: 6
-  droneDestroyDelay: 0
-  treeDestroyDelay: 0
 --- !u!61 &1523458777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1949,6 +1933,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1523458780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523458771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34c25f9146dd4719907cd3f1c2f37ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeLeft: 0
+  totalLife: 6
+  droneWaitTime: 0.2
+  treeWaitTime: 1
 --- !u!1 &1523674294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 1
 --- !u!114 &1857370392
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 4
 --- !u!114 &1935570934
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 3
 --- !u!114 &2059769205
@@ -2611,7 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b81047ca768441ca6732b969e52b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  psts: {fileID: 1523458776}
+  psts: {fileID: 1523458780}
   lifeLeft: 0
   triggerMoment: 2
 --- !u!114 &2118966191

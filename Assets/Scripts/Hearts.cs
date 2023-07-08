@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hearts : MonoBehaviour
 {
-    public StreeTriggered psts;
+    public TreeTriggered psts;
     public float lifeLeft;
     public float triggerMoment;
     // Start is called before the first frame update

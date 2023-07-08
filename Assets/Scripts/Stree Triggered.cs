@@ -9,7 +9,9 @@ public class StreeTriggered : MonoBehaviour
     public event CoroutineCallback OnWaitDroneComplete;
     public event CoroutineCallback OnWaitTreeComplete;
 
+    public Animator anim;
     AudioSource audioSource;
+
     public float lifeLeft;
     public float totalLife = 3f;
     public float droneWaitTime = 0.2f;
@@ -45,6 +47,7 @@ public class StreeTriggered : MonoBehaviour
     {
         if (collision.gameObject.tag == "Drone")
         {
+            anim.SetTrigger("isHit");
             lifeLeft--;
             audioSource.PlayOneShot(audioSource.clip, 1.0F);
             if (lifeLeft > 0)
