@@ -245,7 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeab6751f194443b8791e0120eaa23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomNumber: 0
   drone_1: {fileID: 8300000, guid: 09dfa35abdbfd4a38abd46a18dd07739, type: 3}
   drone_2: {fileID: 8300000, guid: b008c513a89ae41cc97c78752826d0c9, type: 3}
   drone_3: {fileID: 8300000, guid: e972274935877441a91149ce0786638c, type: 3}
@@ -264,7 +263,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
