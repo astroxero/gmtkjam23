@@ -5,11 +5,13 @@ using UnityEngine;
 public class TreeSpawn : MonoBehaviour
 {
     public GameObject treePrefab;
+    public float timeToSpawn;
+    public float totalTime;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        timeToSpawn = 0;
     }
 
     private void spawnTree()
@@ -21,10 +23,21 @@ public class TreeSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (timeToSpawn > 0)
+        {
+            timeToSpawn -= Time.deltaTime;
+        } else
+        {
+            timeToSpawn = 0;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            spawnTree();
+            if (timeToSpawn == 0)
+            {
+                spawnTree();
+                timeToSpawn = totalTime;
+            }
         }
     }
 }
