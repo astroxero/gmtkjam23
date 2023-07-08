@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DroneDeploy : MonoBehaviour
 {
+
     public GameObject dronePrefab;
-    public float respawnTime = 1f;
+
+    float respawnTime;
+    public float startRT;
+    public float nextRT;
+    public float hardRT;
+    public float finalRT;
+
     private Vector2 screenBounds;
+    public float timeCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        respawnTime = startRT;
+        timeCounter = 0;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(droneWave());
     }
@@ -33,6 +43,18 @@ public class DroneDeploy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeCounter += Time.deltaTime;
+        if ((timeCounter >= 30) && (timeCounter < 60))
+        {
+            respawnTime = nextRT;
+        }
+        if ((timeCounter >= 60) && (timeCounter < 90))
+        {
+            respawnTime = hardRT;
+        }
+        if (timeCounter >= 90)
+        {
+            respawnTime = finalRT;
+        }
     }
 }
