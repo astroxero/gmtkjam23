@@ -33,20 +33,36 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(transform.up * speed);
             anim.SetBool("isRunning", true);
         }
+        if ((Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.UpArrow)))
+        {
+            anim.SetBool("isRunning", false);
+        }
         if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
         {
             rb.AddForce(transform.right * speed);
             anim.SetBool("isRunning", true);
+        }
+        if ((Input.GetKeyUp(KeyCode.D)) || (Input.GetKeyUp(KeyCode.RightArrow)))
+        {
+            anim.SetBool("isRunning", false);
         }
         if ((Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.DownArrow)))
         {
             rb.AddForce(transform.up * -speed);
             anim.SetBool("isRunning", true);
         }
+        if ((Input.GetKeyUp(KeyCode.S)) || (Input.GetKeyUp(KeyCode.DownArrow)))
+        {
+            anim.SetBool("isRunning", false);
+        }
         if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
         {
             rb.AddForce(transform.right * -speed);
             anim.SetBool("isRunning", true);
+        }
+        if ((Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.LeftArrow)))
+        {
+            anim.SetBool("isRunning", false);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {

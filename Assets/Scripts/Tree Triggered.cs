@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StreeTriggered : MonoBehaviour
+public class TreeTriggered : MonoBehaviour
 {
     public delegate void CoroutineCallback();
 
@@ -47,7 +47,7 @@ public class StreeTriggered : MonoBehaviour
         {
             lifeLeft--;
             audioSource.PlayOneShot(audioSource.clip, 1.0F);
-            if (lifeLeft > 0)
+            if ((lifeLeft > 0) && (lifeLeft != 0.5))
             {
                 StartCoroutine(waitDrone());
                 collidedDrone = collision.gameObject;
@@ -70,5 +70,15 @@ public class StreeTriggered : MonoBehaviour
         yield return new WaitForSeconds(treeWaitTime);
         OnWaitTreeComplete?.Invoke();
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (lifeLeft <= 0)
+        {
+            StartCoroutine(waitTree());
+            lifeLeft = 0.5f;
+        }
+    } 
 
 }

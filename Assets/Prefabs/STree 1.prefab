@@ -264,7 +264,7 @@ MonoBehaviour:
   lifeLeft: 0
   totalLife: 3
   droneWaitTime: 0.2
-  treeWaitTime: 3
+  treeWaitTime: 1
 --- !u!82 &1304991080082857266
 AudioSource:
   m_ObjectHideFlags: 0
