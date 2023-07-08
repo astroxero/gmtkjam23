@@ -263,8 +263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeLeft: 0
   totalLife: 3
-  droneDestroyDelay: 0.2
-  treeDestroyDelay: 3
+  droneWaitTime: 0.2
+  treeWaitTime: 3
 --- !u!82 &1304991080082857266
 AudioSource:
   m_ObjectHideFlags: 0
