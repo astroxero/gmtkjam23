@@ -33,6 +33,9 @@ public class StreeTriggered : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lifeLeft <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
