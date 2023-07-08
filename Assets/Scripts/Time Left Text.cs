@@ -20,7 +20,7 @@ public class TimeLeftText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tls = Mathf.Floor(tss.timeToSpawn).ToString();
+        tls = Mathf.Ceil(tss.timeToSpawn).ToString();
         tmp.text = tls;
     }
 }

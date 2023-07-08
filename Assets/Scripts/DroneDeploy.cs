@@ -18,7 +18,7 @@ public class DroneDeploy : MonoBehaviour
     private void spawnDrone()
     {
         GameObject newDrone = Instantiate(dronePrefab) as GameObject;
-        newDrone.transform.position = new Vector2(screenBounds.x - 25, Random.Range(-screenBounds.y, screenBounds.y));
+        newDrone.transform.position = new Vector2(screenBounds.x - 25, Random.Range(-4, 5));
     }
 
     IEnumerator droneWave()

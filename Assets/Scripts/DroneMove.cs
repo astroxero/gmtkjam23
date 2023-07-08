@@ -12,7 +12,6 @@ public class DroneMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         speed = Random.Range(3, 6);
     }
 
@@ -20,9 +19,5 @@ public class DroneMove : MonoBehaviour
     void Update()
     {
         rb.AddForce(transform.right * speed);
-        if (transform.position.x > screenBounds.x + 5)
-        {
-            Destroy(this.gameObject);
-        }
     }
 }
