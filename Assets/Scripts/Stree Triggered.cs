@@ -7,6 +7,8 @@ public class StreeTriggered : MonoBehaviour
     AudioSource audioSource;
     public float lifeLeft;
     public float totalLife = 3f;
+    public float droneDestroyDelay;
+    public float treeDestroyDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class StreeTriggered : MonoBehaviour
 
             if (lifeLeft <= 0)
             {
+
                 Destroy(gameObject);
             }
         }
@@ -38,4 +41,5 @@ public class StreeTriggered : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
