@@ -48,11 +48,11 @@ public class DroneDeploy : MonoBehaviour
         {
             respawnTime = nextRT;
         }
-        if ((timeCounter >= 60) && (timeCounter < 90))
+        if ((timeCounter >= 60) && (timeCounter < 120))
         {
             respawnTime = hardRT;
         }
-        if (timeCounter >= 90)
+        if (timeCounter >= 120)
         {
             respawnTime = finalRT;
         }
