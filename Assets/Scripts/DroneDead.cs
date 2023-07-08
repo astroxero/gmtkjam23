@@ -6,6 +6,8 @@ public class DroneDead : MonoBehaviour
 {
 
     public float dronesPassed;
+    public StreeTriggered st;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class DroneDead : MonoBehaviour
         if (collision.gameObject.tag == "Drone")
         {
             Destroy(collision.gameObject);
-            dronesPassed++;
+            st.lifeLeft--;
         }
     }
 

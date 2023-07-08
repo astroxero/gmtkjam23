@@ -5,11 +5,12 @@ using UnityEngine;
 public class StreeTriggered : MonoBehaviour
 {
     public float lifeLeft;
+    public float totalLife = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-        lifeLeft = 3;
+        lifeLeft = totalLife;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
