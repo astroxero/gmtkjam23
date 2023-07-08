@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StreeTriggered : MonoBehaviour
 {
+    AudioSource audioSource;
     public float lifeLeft;
     public float totalLife = 3f;
 
@@ -11,6 +12,7 @@ public class StreeTriggered : MonoBehaviour
     void Start()
     {
         lifeLeft = totalLife;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +21,8 @@ public class StreeTriggered : MonoBehaviour
         {
             Destroy(collision.gameObject);
             lifeLeft--;
+            audioSource.PlayOneShot(audioSource.clip,1.0F);
+
             if (lifeLeft <= 0)
             {
                 Destroy(gameObject);
