@@ -47,8 +47,15 @@ public class StreeTriggered : MonoBehaviour
     {
         if (collision.gameObject.tag == "Drone")
         {
-            anim.SetTrigger("isHit");
             lifeLeft--;
+            if (lifeLeft > 0)
+            {
+                anim.SetTrigger("isHit");
+            }
+            if (lifeLeft <= 0)
+            {
+                anim.SetTrigger("isDead");
+            }    
             audioSource.PlayOneShot(audioSource.clip, 1.0F);
             if (lifeLeft > 0)
             {
