@@ -16,7 +16,7 @@ public class DroneMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.AddForce(transform.right * speed);
     }
