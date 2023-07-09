@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e90f68fe2e848adbf76d7aa4ee7fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1523458774}
   dronePrefab: {fileID: 3212423269879791767, guid: bbc5ee3228e034d04afce637c2819575, type: 3}
   startRT: 3
   nextRT: 2
@@ -1549,8 +1549,9 @@ GameObject:
   - component: {fileID: 971032662}
   - component: {fileID: 971032661}
   - component: {fileID: 971032660}
+  - component: {fileID: 971032664}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,10 +1572,10 @@ RectTransform:
   m_Father: {fileID: 1463679683}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 448}
-  m_SizeDelta: {x: 180, y: 55.8547}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -10, y: -92}
+  m_SizeDelta: {x: 180, y: 55.854675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &971032660
 CanvasGroup:
@@ -1698,6 +1699,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971032658}
   m_CullTransparentMesh: 1
+--- !u!114 &971032664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971032658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179870bdd52ca48728d0087bc437c375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textObject: {fileID: 971032662}
+  dd: {fileID: 575744258}
+  scoreText: 
 --- !u!1 &1016102441
 GameObject:
   m_ObjectHideFlags: 0
