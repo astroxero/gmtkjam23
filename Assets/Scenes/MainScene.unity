@@ -2700,6 +2700,10 @@ MonoBehaviour:
   lifeLeft: 0
   totalLife: 6
   droneWaitTime: 0.2
+  impact: {fileID: 8300000, guid: 59f5c829df0594a75b5ab98fde92d053, type: 3}
+  tree_fall: {fileID: 8300000, guid: e114c10df05b640068478982c55a9820, type: 3}
+  audioImpactVol: 0.6
+  audioTreeFallVol: 0.8
 --- !u!1 &1523674294
 GameObject:
   m_ObjectHideFlags: 0

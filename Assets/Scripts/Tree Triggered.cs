@@ -15,6 +15,10 @@ public class TreeTriggered : MonoBehaviour
     public float totalLife = 3f;
     public float droneWaitTime = 0.2f;
     private GameObject collidedDrone;
+    public AudioClip impact;
+    public AudioClip tree_fall;
+    public float audioImpactVol;
+    public float audioTreeFallVol;
 
     // Start is called before the first frame update
     void Start()
@@ -47,10 +51,12 @@ public class TreeTriggered : MonoBehaviour
             if (lifeLeft <= 0)
             {
                 anim.SetTrigger("isDead");
+                // trigger tree fall sound here
+                audioSource.PlayOneShot(tree_fall, audioTreeFallVol);
                 Destroy(GetComponent<TreeTriggered>());
                 Destroy(GetComponent<PlayerMove>());
             }
-            audioSource.PlayOneShot(audioSource.clip, 1.0F);
+            audioSource.PlayOneShot(impact, audioImpactVol);
             if (lifeLeft > 0)
             {
                 StartCoroutine(waitDrone());
@@ -71,6 +77,8 @@ public class TreeTriggered : MonoBehaviour
         if (lifeLeft <= 0)
         {
             anim.SetTrigger("isDead");
+            // trigger tree fall sound here
+            audioSource.PlayOneShot(tree_fall, audioTreeFallVol);
             Destroy(GetComponent<TreeTriggered>());
             Destroy(GetComponent<PlayerMove>());
         }
