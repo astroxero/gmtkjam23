@@ -12,7 +12,7 @@ public class DroneMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = Random.Range(3, 6);
+        speed = Random.Range(60, 130);
     }
 
     // Update is called once per frame

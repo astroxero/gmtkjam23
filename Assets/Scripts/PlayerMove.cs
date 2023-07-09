@@ -64,11 +64,11 @@ public class PlayerMove : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
         {
             turnLeft();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
         {
             turnRight();
         }

@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   rb: {fileID: 0}
-  speed: 5.37
+  speed: 95.7
 --- !u!61 &1523458777
 BoxCollider2D:
   m_ObjectHideFlags: 0
