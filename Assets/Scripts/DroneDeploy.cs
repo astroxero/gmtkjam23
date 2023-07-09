@@ -5,7 +5,7 @@ using AudioSource = UnityEngine.AudioSource;
 
 public class DroneDeploy : MonoBehaviour
 {
-
+    public PlayerMove player;
     public GameObject dronePrefab;
 
     float respawnTime;
@@ -50,7 +50,10 @@ public class DroneDeploy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeCounter += Time.deltaTime;
+        if (player != null)
+        {
+            timeCounter += Time.deltaTime;
+        }
         if ((timeCounter >= 30) && (timeCounter < 60))
         {
             respawnTime = nextRT;
