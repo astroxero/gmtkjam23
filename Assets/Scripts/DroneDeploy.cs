@@ -13,6 +13,7 @@ public class DroneDeploy : MonoBehaviour
     public float nextRT;
     public float hardRT;
     public float finalRT;
+    public float audioDroneSpawnVol;
     public AudioSource audioSource;
 
     private Vector2 screenBounds;
@@ -33,9 +34,8 @@ public class DroneDeploy : MonoBehaviour
         GameObject newDrone = Instantiate(dronePrefab) as GameObject;
         newDrone.transform.position = new Vector2(screenBounds.x - 25, Random.Range(-4, 5));
 
-        // Play drone sounds
-        float volume = 1;
-        audioSource.PlayOneShot(audioSource.clip, volume);
+        // Play drone spawn sound
+        audioSource.PlayOneShot(audioSource.clip, audioDroneSpawnVol);
     }
 
     IEnumerator droneWave()

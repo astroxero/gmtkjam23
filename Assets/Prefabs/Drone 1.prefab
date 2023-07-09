@@ -252,6 +252,7 @@ MonoBehaviour:
   drone_5: {fileID: 8300000, guid: 36ff59d9b8c27474e9d0f3e549d09b93, type: 3}
   drone_6: {fileID: 8300000, guid: 7231d020fea3247a7a2dd04745a8047c, type: 3}
   drone_7: {fileID: 8300000, guid: 67b482bfde7664a7db8636fb7b8b1b0a, type: 3}
+  audioDroneFlyVol: 0.5
 --- !u!82 &7288768240967229313
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class DroneFlySound : MonoBehaviour
     public AudioClip drone_5;
     public AudioClip drone_6;
     public AudioClip drone_7;
-
+    public float audioDroneFlyVol;
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class DroneFlySound : MonoBehaviour
                 break;
         }
         // clipName = drone_Name + randomNumber.ToString();
-        audioSource.PlayOneShot(theClip, 0.5F);
+        audioSource.PlayOneShot(theClip, audioDroneFlyVol);
     }
 
     void update()

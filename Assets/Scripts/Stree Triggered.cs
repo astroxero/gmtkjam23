@@ -5,9 +5,13 @@ using UnityEngine;
 public class StreeTriggered : MonoBehaviour
 {
     public delegate void CoroutineCallback();
-
+    public AudioClip impact;
+    public AudioClip tree_fall;
+    public float audioImpactVol;
+    public float audioTreeFallVol;
     public event CoroutineCallback OnWaitDroneComplete;
     public event CoroutineCallback OnWaitTreeComplete;
+
 
     public Animator anim;
     AudioSource audioSource;
@@ -55,8 +59,10 @@ public class StreeTriggered : MonoBehaviour
             if (lifeLeft <= 0)
             {
                 anim.SetTrigger("isDead");
+                // trigger tree fall sound here
+                audioSource.PlayOneShot(tree_fall, audioTreeFallVol);
             }    
-            audioSource.PlayOneShot(audioSource.clip, 1.0F);
+            audioSource.PlayOneShot(impact, audioImpactVol);
             if (lifeLeft > 0)
             {
                 StartCoroutine(waitDrone());
