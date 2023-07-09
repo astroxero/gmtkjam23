@@ -8,6 +8,7 @@ public class GetScore : MonoBehaviour
     public TextMeshProUGUI smallText;
     public TextMeshProUGUI smallHighText;
     public TextMeshProUGUI bigText;
+    public TextMeshProUGUI bigHighText;
     public DroneDeploy dd;
 
     float currentScore;
@@ -46,8 +47,8 @@ public class GetScore : MonoBehaviour
 
         smallText.text ="Score: " + currentScoreText + "sec.";
         smallHighText.text = "High Score: " + highScoreText + "sec.";
-        bigText.text = "High Score: " + highScoreText + "sec. " + "" +"Score: " + currentScoreText + "sec.";
-        bigText.alignment = TextAlignmentOptions.Center;
+        bigText.text = "Score: " + currentScoreText + "sec.";
+        bigHighText.text = "High Score: " + highScoreText + "sec.";
 
     }
 }
