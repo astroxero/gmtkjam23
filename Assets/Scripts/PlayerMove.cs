@@ -7,6 +7,13 @@ public class PlayerMove : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb;
     public float speed = 0;
+    
+    bool keyUp = false;
+    bool keyDown = false;
+    bool keyLeft = false;
+    bool keyRight = false;
+    bool isRunning = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,49 +37,52 @@ public class PlayerMove : MonoBehaviour
     {
         if ((Input.GetKey(KeyCode.W) ) || (Input.GetKey(KeyCode.UpArrow)))
         {
-            rb.AddForce(transform.up * speed);
-            anim.SetBool("isRunning", true);
-        }
-        if ((Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.UpArrow)))
-        {
-            anim.SetBool("isRunning", false);
-        }
-        if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
-        {
-            rb.AddForce(transform.right * speed);
-            anim.SetBool("isRunning", true);
-        }
-        if ((Input.GetKeyUp(KeyCode.D)) || (Input.GetKeyUp(KeyCode.RightArrow)))
-        {
-            anim.SetBool("isRunning", false);
-        }
+            keyUp = true;
+        } else {keyUp = false;};
+
         if ((Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.DownArrow)))
         {
-            rb.AddForce(transform.up * -speed);
-            anim.SetBool("isRunning", true);
-        }
-        if ((Input.GetKeyUp(KeyCode.S)) || (Input.GetKeyUp(KeyCode.DownArrow)))
-        {
-            anim.SetBool("isRunning", false);
-        }
-        if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
-        {
-            rb.AddForce(transform.right * -speed);
-            anim.SetBool("isRunning", true);
-        }
-        if ((Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.LeftArrow)))
-        {
-            anim.SetBool("isRunning", false);
-        }
-        if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
-        {
-            turnLeft();
-        }
+            keyDown = true;
+        } else {keyDown = false;};
+
         if ((Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.RightArrow)))
         {
+            keyRight = true;
+        } else {keyRight = false;};
+
+        if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.LeftArrow)))
+        {
+            keyLeft = true;
+        } else {keyLeft = false;};
+
+        isRunning = false;
+
+        if (keyLeft) {
+            turnLeft();
+            isRunning = true;
+            rb.AddForce(transform.right * -speed);
+        }      
+
+        if (keyRight) {
             turnRight();
+            isRunning = true;
+            rb.AddForce(transform.right * speed);
+        }  
+
+        if (keyUp) {
+            isRunning = true;
+            rb.AddForce(transform.up * speed);
         }
 
-        
+        if (keyDown) {
+            isRunning = true;
+            rb.AddForce(transform.up * -speed);
+        }
+
+        if (isRunning) {
+            anim.SetBool("isRunning", true);
+        } else { 
+            anim.SetBool("isRunning", false);
+        }
     }
 }
