@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayAgainButton : MonoBehaviour
 {
     public CanvasElementVisibility button;
+    public CanvasElementVisibility scoreText;
     public PlayerMove player;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class PlayAgainButton : MonoBehaviour
         if (player != null)
         {
             button.Visible = false;
+            scoreText.Visible = false;
         }
         
     }
@@ -28,8 +30,8 @@ public class PlayAgainButton : MonoBehaviour
     {
         if (player == null)
         {
-            print("player Dead");
             button.Visible = true;
+            scoreText.Visible = true;
         }
     }
 }
