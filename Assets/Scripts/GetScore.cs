@@ -45,10 +45,10 @@ public class GetScore : MonoBehaviour
         setCurrentScore();
         setHighScore();
 
-        smallText.text ="Score: " + currentScoreText + "sec.";
-        smallHighText.text = "High Score: " + highScoreText + "sec.";
-        bigText.text = "Score: " + currentScoreText + "sec.";
-        bigHighText.text = "High Score: " + highScoreText + "sec.";
+        smallText.text ="Score: " + currentScoreText + " sec.";
+        smallHighText.text = "High Score: " + highScoreText + " sec.";
+        bigText.text = "Score: " + currentScoreText + " sec.";
+        bigHighText.text = "High Score: " + highScoreText + " sec.";
 
     }
 }
