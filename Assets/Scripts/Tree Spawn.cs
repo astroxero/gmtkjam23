@@ -7,7 +7,7 @@ public class TreeSpawn : MonoBehaviour
     public GameObject treePrefab;
     public float timeToSpawn;
     public float totalTime;
-
+    
     // Start is called before the first frame update
     void Start()
     {
