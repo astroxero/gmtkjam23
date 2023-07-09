@@ -6,16 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayAgainButton : MonoBehaviour
 {
+    public CanvasElementVisibility bigText;
+    public CanvasElementVisibility smallText;
     public CanvasElementVisibility button;
-    public CanvasElementVisibility scoreText;
     public PlayerMove player;
     // Start is called before the first frame update
     void Start()
     {
         if (player != null)
         {
+            smallText.Visible = true;
+            bigText.Visible = false;
             button.Visible = false;
-            scoreText.Visible = false;
         }
         
     }
@@ -30,8 +32,9 @@ public class PlayAgainButton : MonoBehaviour
     {
         if (player == null)
         {
+            smallText.Visible = false;
+            bigText.Visible = true;
             button.Visible = true;
-            scoreText.Visible = true;
         }
     }
 }
