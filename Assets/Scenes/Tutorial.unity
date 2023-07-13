@@ -1993,9 +1993,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Don't let drones get passed you and don't get hit by drones. \nBoth of
-    these lose you a heart. \nDo this by placing down trees to stop the drones which 
-    you can do every 5 seconds. Trees will eventually fall."
+  m_text: "Don't let drones get past you and don't get hit by drones. \nBoth of these
+    lose you a heart. \nDo this by placing down trees to stop the drones which  you
+    can do every 5 seconds. Trees will eventually fall."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce6b3fbb2319d44429e29fea10220cf0, type: 2}
   m_sharedMaterial: {fileID: 4383089449281411671, guid: ce6b3fbb2319d44429e29fea10220cf0, type: 2}
